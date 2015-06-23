@@ -7,6 +7,7 @@ $(document).ready(function () {
     $("form#resetPassword").addClass("form-group");
     $("form#resetPassword fieldset input").addClass("form-control");
     $("form#resetPassword fieldset input[type='submit']").addClass("btn btn-primary");
+    $("form#resetPassword fieldset #resetPassword").before("<br/>");
 
     $("form#loginForm").addClass("form-group");
     $("form#loginForm fieldset input:not(.req)").addClass("form-control");
