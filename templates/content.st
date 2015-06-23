@@ -8,7 +8,7 @@
         </h1>
         $if(messages)$
             <div class="messages">
-                $messages:message()$
+                $messages()$
             </div>
         $endif$
         $content$
