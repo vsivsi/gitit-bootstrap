@@ -20,11 +20,12 @@ h6 > a:link, h6 > a:active, h6 > a:hover, h6 > a:focus, h6 > a:visited {
     text-decoration: none;
 }
 
-#logo, #searchform {
-    margin-bottom: 20px;
+#searchform, #gotoform {
+    margin-top: 15px;
 }
 
 #logo {
+    margin-bottom: 20px;
     text-align: center;
 }
 
