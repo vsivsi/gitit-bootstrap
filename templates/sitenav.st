@@ -15,6 +15,7 @@
                 <li><a href="$base$/_feed/" type="application/atom+xml" rel="alternate" title="ATOM Feed">Atom feed</a></li>
                 $endif$
                 <li><a href="$base$/Help">Help</a></li>
+                <li/>
             </ul>
             <form action="$base$/_search" method="get" id="searchform">
                 <input type="text" name="patterns" id="patterns"
