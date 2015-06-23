@@ -1,5 +1,9 @@
 <div id="userbox">
-    <a class="registerlink" href="$base$/_register">Create account</a>
-    <a class="loginlink" href="$base$/_login">Login</a>
-    <a class="logoutlink" href="$base$/_logout">Logout <span class="logged_in_user"></span></a>
+  <noscript>
+    <a href="$base$/_login">Login</a>
+    <a href="$base$/_logout">Logout</a>
+  </noscript>
+  &nbsp;
+  <a id="loginlink" class="login" href="$base$/_login">Login / Get an account</a>
+  <a id="logoutlink" class="login" href="$base$/_logout">Logout <span id="logged_in_user"></span></a>
 </div>
