@@ -17,13 +17,13 @@
         <li><a href="$base$/Help">Help</a></li>
         <li> </li>
       </ul>
-      <form action="$base$/_search" method="get" id="searchform">
-        <input type="text" name="patterns" id="patterns"
-        class="form-control" placeholder="Search" />
-      </form>
       <form action="$base$/_go" method="post" id="goform">
         <input type="text" name="gotopage" id="gotopage"
         class="form-control" placeholder="Go to page" />
+      </form>
+      <form action="$base$/_search" method="get" id="searchform">
+        <input type="text" name="patterns" id="patterns"
+        class="form-control" placeholder="Search" />
       </form>
     </div>
   </div>
