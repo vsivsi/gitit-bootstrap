@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#exportbox select").addClass("form-control input-sm");
     $("#export").addClass("form-control btn btn-default btn-sm");
 
-    $("form#resetPassword)
+    $("form#resetPassword")
       .addClass("form-inline")
       .children("input")
       .addClass("form-control");
