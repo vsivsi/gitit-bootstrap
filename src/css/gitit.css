@@ -238,6 +238,8 @@ pre.matches span.highlighted {
     background-color: #fdd;
 }
 
+/* .req is used to hide a honeypot in a form */
+.req { display: none; }
 
 /* Syntax highlighting */
 
