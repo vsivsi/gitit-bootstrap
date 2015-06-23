@@ -8,5 +8,5 @@ $(document).ready(function () {
     $("form#resetPassword fieldset input").addClass("form-control");
 
     $("form#loginForm").addClass("form-inline");
-    $("form#resetPassword fieldset input").addClass("form-control");
+    $("form#loginForm fieldset input").addClass("form-control");
 });
