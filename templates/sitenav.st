@@ -19,11 +19,11 @@
       </ul>
       <form action="$base$/_go" method="post" id="goform">
         <input type="text" name="gotopage" id="gotopage"
-        class="form-control" placeholder="Go to page" />
+        class="form-control input-sm" placeholder="Go to page" />
       </form>
       <form action="$base$/_search" method="get" id="searchform">
         <input type="text" name="patterns" id="patterns"
-        class="form-control" placeholder="Search" />
+        class="form-control input-sm" placeholder="Search" />
       </form>
     </div>
   </div>
