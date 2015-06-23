@@ -6,7 +6,10 @@ $(document).ready(function () {
 
     $("form#resetPassword").addClass("form-inline");
     $("form#resetPassword fieldset input").addClass("form-control");
+    $("form#resetPassword fieldset input[type='submit']").addClass("btn btn-primary");
 
     $("form#loginForm").addClass("form-group");
     $("form#loginForm fieldset input:not(.req)").addClass("form-control");
+    $("form#loginForm fieldset input[type='submit']").addClass("btn btn-primary");
+
 });
