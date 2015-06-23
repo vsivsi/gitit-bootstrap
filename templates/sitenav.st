@@ -5,13 +5,6 @@
     </form>
 </div>
 
-<div class="col-md-12">
-    <form action="$base$/_go" method="post" id="goform">
-        <input type="text" name="gotopage" id="gotopage"
-               class="form-control" placeholder="Goto page" />
-    </form>
-</div>
-
 <div class="sitenav col-sm-6 col-md-12">
     <div class="panel panel-default">
         <div class="panel-heading">Site</div>
@@ -30,6 +23,10 @@
                 $endif$
                 <li><a href="$base$/Help">Help</a></li>
             </ul>
+            <form action="$base$/_go" method="post" id="goform">
+                <input type="text" name="gotopage" id="gotopage"
+                       class="form-control" placeholder="Go to page" />
+            </form>
         </div>
     </div>
 </div>
