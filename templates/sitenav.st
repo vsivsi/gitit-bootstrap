@@ -28,9 +28,3 @@
     </div>
   </div>
 </div>
-<!-- This is because there are some pages that don't use the page template,
-(e.g. password reset) but they all seem to load the site nav sidebar. -->
-<script src="$base$/js/jquery.min.js"></script>
-<script src="$base$/js/bootstrap.min.js"></script>
-<script src="$base$/js/jquery-ui-1.10.4.custom.min.js"></script>
-<script src="$base$/js/gitit.min.js"></script>
