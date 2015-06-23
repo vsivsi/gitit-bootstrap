@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#exportbox select").addClass("form-control input-sm");
     $("#export").addClass("form-control btn btn-default btn-sm");
 
-    $("form#resetPassword").addClass("form-inline");
+    $("form#resetPassword").addClass("form-group");
     $("form#resetPassword fieldset input").addClass("form-control");
     $("form#resetPassword fieldset input[type='submit']").addClass("btn btn-primary");
 
