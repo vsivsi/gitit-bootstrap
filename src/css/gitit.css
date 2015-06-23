@@ -186,12 +186,6 @@ sup + sup {
 }
 
 
-/* .req is used to hide a honeypot in a form */
-.req {
-    display: none;
-}
-
-
 /* Search */
 
 #pattern {
@@ -240,6 +234,10 @@ pre.matches span.highlighted {
 
 /* .req is used to hide a honeypot in a form */
 .req { display: none; }
+
+dl dd { margin-left: 1em; }
+
+dl { margin-left: 2em; }
 
 /* Syntax highlighting */
 
