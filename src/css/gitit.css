@@ -237,7 +237,9 @@ pre.matches span.highlighted {
 
 dl dd { margin-left: 1em; }
 
-dl { margin-left: 2em; }
+dl { margin-left: 1.5em; }
+
+tr td { padding: 0.5em; }
 
 /* Syntax highlighting */
 
