@@ -11,5 +11,6 @@ $(document).ready(function () {
     $("form#loginForm").addClass("form-group");
     $("form#loginForm fieldset input:not(.req)").addClass("form-control");
     $("form#loginForm fieldset input[type='submit']").addClass("btn btn-primary");
+    $("form#loginForm fieldset #login").before("<br/>");
 
 });
