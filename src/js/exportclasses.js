@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#exportform").addClass("form-inline form-group")
+    $("#exportbox").addClass("form-inline form-group")
+    $("#exportbox select").addClass("form-control input-sm")
     $("#export").addClass("form-control btn btn-default btn-sm");
-    $("#exportform select").addClass("form-control input-sm")
 });
