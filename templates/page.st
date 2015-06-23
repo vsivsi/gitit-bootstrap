@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <script src="$base$/js/jquery.1.2.6.min.js" type="text/javascript"></script>
+    <script src="$base$/js/jquery-1.2.6.min.js" type="text/javascript"></script>
     <script src="$base$/js/jquery-ui-combined-1.6rc2.min.js" type="text/javascript"></script>
     <script src="$base$/js/MathMLinHTML.js" type="text/javascript"></script>
     <script src="$base$/js/bootstrap.min.js" type="text/javascript"></script>
