@@ -3,7 +3,7 @@ function updatePreviewPane() {
   var url = location.pathname.replace(/_edit\//,"_preview/");
   $.post(
     url,
-    {"raw" : $("#editedText").val())},
+    {"raw" : $("#editedText").val()},
     function(data) {
       $('#previewpane').html(data);
       // Process any mathematics if we're using MathML
