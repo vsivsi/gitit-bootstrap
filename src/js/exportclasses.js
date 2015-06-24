@@ -17,7 +17,7 @@ $(document).ready(function () {
     $("form#editform").addClass("form-group form-inline");
     $("form#editform input").addClass("form-control");
     $("form#editform #update").addClass("btn btn-primary");
-    $("form#editform #cancel").addClass("btn btn-warning");
+    $("form#editform #cancel").addClass("btn btn-default");
     $("form#editform #previewButton").addClass("btn btn-info");
     $("#previewpane").addClass("panel panel-default")
 });
