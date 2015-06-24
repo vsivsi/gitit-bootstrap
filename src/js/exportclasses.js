@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+    if ($('.tabs').size() === 1) {
+      $('.tabs').addClass('nav nav-tabs');
+      $('.tabs li.selected').addClass('active');
+    }
+
     if ((location.pathname.substr(0, 2) === '/_') && ($('div.pageTools').size() > 0)) {
       $('div.pageTools').hide();
     }
@@ -12,7 +17,7 @@ $(document).ready(function () {
 
     if ($('#categoryList').size() === 1) {
       $('#content').before($('#categoryList').detach());
-      $('#categoryList').addClass('panel-heading'); 
+      $('#categoryList').addClass('panel-heading');
       $('#categoryList ul').addClass('list-inline');
       $('#categoryList ul li a')
         .each(function () {
