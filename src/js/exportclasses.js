@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     if ($('.tabs').size() === 1) {
-      $('.tabs').addClass('nav nav-tabs');
+      $('.tabs').addClass('nav nav-pills');
       $('.tabs li.selected').addClass('active').attr('role', 'presentation');
     }
 
@@ -16,8 +16,8 @@ $(document).ready(function () {
     }
 
     if ($('#categoryList').size() === 1) {
-      $('#content').before($('#categoryList').detach());
-      $('#categoryList').addClass('well well-sm');
+      // $('#content').before($('#categoryList').detach());
+      $('#categoryList').addClass('well well-sm hidden-print');
       $('#categoryList ul').addClass('list-inline');
       $('#categoryList ul li a')
         .each(function () {
