@@ -8,7 +8,6 @@ $(document).ready(function () {
       $("#exportbox").addClass("form-inline");
       $("#exportbox select").addClass("form-control input-sm");
       $("#export").addClass("form-control btn btn-default btn-sm");
-      return;
     }
 
     if ((location.pathname === '/_login') || (location.pathname === '/_register')) {
@@ -52,9 +51,10 @@ $(document).ready(function () {
          });
       return;
     }
-    
+
     if (location.pathname.substr(0, 7) === '/_diff/') {
       $("small.revision").hide();
+      return;
     }
 
     if (location.pathname === '/_activity') {

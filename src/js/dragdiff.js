@@ -1,7 +1,6 @@
 $(document).ready(function(){
     if (location.pathname.substr(0, 10) != '/_history/') return;
 
-    $("small.revision").hide();
     $("ul.history").addClass('list-group');
     $("li.difflink").addClass('list-group-item');
 
