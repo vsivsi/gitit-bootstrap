@@ -19,5 +19,5 @@ $(document).ready(function () {
     $("form#editform #update").addClass("btn btn-primary");
     $("form#editform #cancel").addClass("btn btn-default");
     $("form#editform #previewButton").addClass("btn btn-info");
-    $("#previewpane").addClass("panel panel-default")
+    $("#previewpane").addClass("panel panel-default panel-body")
 });
