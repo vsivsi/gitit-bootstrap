@@ -17,7 +17,9 @@
         <div class="col-md-10 col-md-push-2" id="maincol">
           <div class="hidden-print">
             $userbox()$
-            $tabs$
+            <div role="navigation">
+              $tabs$
+            </div>
           </div>
           $content()$
           $if(markuphelp)$
