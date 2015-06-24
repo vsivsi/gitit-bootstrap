@@ -53,7 +53,18 @@ $(document).ready(function () {
     }
 
     if (location.pathname === '/_categories') {
-      $('ul li a').wrapInner('<span class="label">');
+      $('#categoryList ul li a').wrapInner('<span class="label label-primary">');
+    }
+
+    if (location.pathname.substr(0, 11) === '/_category/') {
+      $('#categoryList ul li a')
+        .each(function (q) {
+          if (q.text().substr(0,1) === '-') {
+            q.wrapInner('<span class="label label-danger">');
+          } else {
+            q.wrapInner('<span class="label label-success">');
+          }
+        });
     }
 
     if (location.pathname.substr(0, 7) === '/_diff/') {
