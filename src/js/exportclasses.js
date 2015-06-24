@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    if ((location.pathname.substr(0, 1) === '/_') && ($('div.pageTools').size() > 0)) {
+    if ((location.pathname.substr(0, 2) === '/_') && ($('div.pageTools').size() > 0)) {
       $('div.pageTools').hide();
     }
 
@@ -55,6 +55,6 @@ $(document).ready(function () {
 
     if (location.pathname === '/_activity') {
       $("ul.history").addClass('list-group');
-      $("li.difflink").addClass('list-group-item');
+      $("ul.history li").addClass('list-group-item');
     }
 });
