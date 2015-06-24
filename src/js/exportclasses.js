@@ -52,6 +52,10 @@ $(document).ready(function () {
          });
       return;
     }
+    
+    if (location.pathname.substr(0, 7) === '/_diff/') {
+      $("small.revision").hide();
+    }
 
     if (location.pathname === '/_activity') {
       $("ul.history").addClass('list-group');
