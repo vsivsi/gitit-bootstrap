@@ -11,7 +11,7 @@ $(document).ready(function () {
       return;
     }
 
-    if ((location.pathname === '/_login') || (location.pathname.substr(0, 10) === '/_register')) {
+    if ((location.pathname === '/_login') || (location.pathname === '/_register')) {
       $("form#loginForm").addClass("form-group");
       $("form#loginForm fieldset input:not(.req)").addClass("form-control");
       $("form#loginForm fieldset input[type='submit']").addClass("btn btn-primary");
