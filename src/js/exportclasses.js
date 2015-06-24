@@ -16,7 +16,7 @@ $(document).ready(function () {
     }
 
     if ($('#categoryList').size() === 1) {
-      $('#content').after($('#categoryList').detach());
+      $('#main').after($('#categoryList').detach());
       $('#categoryList').addClass('panel-footer hidden-print');
       $('#categoryList ul').addClass('list-inline');
       $('#categoryList ul li a')
