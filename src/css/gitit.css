@@ -98,7 +98,7 @@ small.revision {
     white-space: nowrap;
 }
 
-.tabs {
+/*.tabs {
     float: left;
     list-style: none;
     margin: 0;
@@ -116,10 +116,11 @@ small.revision {
     padding: 10px 15px;
     position: relative;
 }
+
 .tabs > li.selected > a {
     border-color: #428bca #428bca #fff;
     color: #000;
-}
+}*/
 
 #main {
     border-top-left-radius: 0;
