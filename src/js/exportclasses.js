@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("form#loginForm fieldset input[type='submit']").addClass("btn btn-primary");
     $("form#loginForm fieldset #login").before("<br/>");
 
-    $("form#editform").addClass("form-group");
+    $("form#editform").addClass("form-group form-inline");
     $("form#editform input").addClass("form-control");
     $("form#editform #update").addClass("btn btn-primary");
     $("form#editform #cancel").addClass("btn btn-warning");
