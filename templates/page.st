@@ -14,8 +14,8 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-10 col-md-push-2" id="maincol">
-          <div class="hidden-print">
+        <div class="col-md-10 col-md-push-2 panel panel-default" id="maincol">
+          <div class="hidden-print panel-heading">
             $userbox()$
             <div role="navigation">
               $tabs$
