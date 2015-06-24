@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     if ($('#categoryList').size() === 1) {
       // $('#content').before($('#categoryList').detach());
-      $('#categoryList').addClass('well well-sm hidden-print');
+      $('#categoryList').addClass('panel-footer hidden-print');
       $('#categoryList ul').addClass('list-inline');
       $('#categoryList ul li a')
         .each(function () {

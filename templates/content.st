@@ -1,5 +1,5 @@
 <div id="main">
-    <div id="content">
+    <div id="content" class="panel-body">
         <h1 class="pageTitle">
             <a href="$base$$pageUrl$">$pagetitle$</a>
             $if(revision)$
