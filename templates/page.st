@@ -44,7 +44,7 @@
     <script src="$base$/js/jquery-ui-1.11.4.min.js" type="text/javascript"></script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <script src="$base$/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="$base$/js/gitit.min.js" type="text/javascript"></script>
+    <script src="$base$/js/gitit.js" type="text/javascript"></script>
     $expire()$
     $getuser()$
   </body>
