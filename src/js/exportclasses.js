@@ -73,8 +73,8 @@ $(document).ready(function () {
     }
 
     if (location.pathname.substr(0, 11) === '/_category/') {
-      $('#content ul').addClass('list-group');
-      $("#content ul li").addClass('list-group-item');
+      $('#content > ul').addClass('list-group');
+      $("#content > ul li").addClass('list-group-item');
     }
 
     if (location.pathname.substr(0, 7) === '/_diff/') {
