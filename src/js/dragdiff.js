@@ -1,6 +1,9 @@
 $(document).ready(function(){
     if (location.pathname.substr(0, 10) != '/_history/') return;
 
+    $("ul.history").addClass('list-group');
+    $("li.difflink").addClass('list-group-item');
+
     $(".difflink").draggable({helper: "clone"});
     $(".difflink").droppable({
          accept: ".difflink",
