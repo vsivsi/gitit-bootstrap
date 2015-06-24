@@ -26,13 +26,13 @@ $(document).ready(function () {
     $("div.markupHelp pre").hide();
     $("div.markupHelp h2")
        .after('<button id="markupHelpShowButton" type="button" class="btn btn-default">Show</button>')
-    $("#markupHelpShowButton").on("click", function () {
-         if ($("#markupHelpShowButton:first-child").text() === "Show") {
-           $("#markupHelpShowButton:first-child").text("Hide");
-           $("div.markupHelp pre").show();
-         } else {
-           $("#markupHelpShowButton:first-child").text("Show");
+    $("#markupHelpShowButton").on("click", function (ev) {
+         if (ev.target.hasClass('active')) {
+           ev.target.removeClass('active')
            $("div.markupHelp pre").hide();
+         } else {
+           ev.target.addClass('active')
+           $("div.markupHelp pre").show();
          }
        });
 
