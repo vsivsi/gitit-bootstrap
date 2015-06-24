@@ -53,12 +53,13 @@ $(document).ready(function () {
     }
 
     if (location.pathname === '/_categories') {
-      $('#categoryList ul li a').wrapInner('<span class="label label-primary">');
+      $('#content ul li a').wrapInner('<span class="label label-primary">');
     }
 
     if (location.pathname.substr(0, 11) === '/_category/') {
       $('#categoryList ul li a')
-        .each(function (q) {
+        .each(function () {
+          var q = $(this);
           if (q.text().substr(0,1) === '-') {
             q.wrapInner('<span class="label label-danger">');
           } else {
