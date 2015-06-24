@@ -14,10 +14,10 @@ $(document).ready(function () {
     $("form#loginForm fieldset input[type='submit']").addClass("btn btn-primary");
     $("form#loginForm fieldset #login").before("<br/>");
 
-    $("form#editForm").addClass("form-group");
-    $("form#editForm input").addClass("form-control");
-    $("form#editForm #update").addClass("btn btn-primary");
-    $("form#editForm #cancel").addClass("btn btn-warning");
-    $("form#editForm #previewButton").addClass("btn btn-info");
+    $("form#editform").addClass("form-group");
+    $("form#editform input").addClass("form-control");
+    $("form#editform #update").addClass("btn btn-primary");
+    $("form#editform #cancel").addClass("btn btn-warning");
+    $("form#editform #previewButton").addClass("btn btn-info");
 
 });
