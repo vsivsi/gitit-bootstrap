@@ -15,7 +15,7 @@ $(document).ready(function () {
       return;
     }
 
-    if (location.pathname === '_resetPassword')) {
+    if (location.pathname === '_resetPassword') {
       $("form#resetPassword").addClass("form-group");
       $("form#resetPassword fieldset input").addClass("form-control");
       $("form#resetPassword fieldset input[type='submit']").addClass("btn btn-primary");
