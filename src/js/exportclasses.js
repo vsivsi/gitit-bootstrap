@@ -26,7 +26,7 @@ $(document).ready(function () {
     $("div.markupHelp pre").hide();
     $("div.markupHelp h2")
        .after('<button id="markupHelpShowButton" type="button" class="btn btn-default">Show</button>')
-       .on("click", function () {
+    $("#markupHelpShowButton").on("click", function () {
          if ($("#markupHelpShowButton:first-child").text() === "Show") {
            $("#markupHelpShowButton:first-child").text("Hide");
            $("div.markupHelp pre").show();
