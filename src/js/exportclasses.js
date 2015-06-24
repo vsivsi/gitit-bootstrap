@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    if ((location.pathname.substr(0, 1) === '/_') && ($('div.pageTools').size() > 0)) {
+      $('div.pageTools').hide();
+    }
+
     if ($("#exportbox").size() === 1) {
       $("#exportbox").addClass("form-inline");
       $("#exportbox select").addClass("form-control input-sm");
@@ -47,5 +51,10 @@ $(document).ready(function () {
            }
          });
       return;
+    }
+
+    if (location.pathname === '/_activity') {
+      $("ul.history").addClass('list-group');
+      $("li.difflink").addClass('list-group-item');
     }
 });
