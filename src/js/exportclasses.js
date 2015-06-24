@@ -38,18 +38,22 @@ $(document).ready(function () {
 
       $("div.markupHelp pre").hide();
       $("div.markupHelp h2")
-         .after('<p><button id="markupHelpShowButton" type="button" class="btn btn-default">Show</button></p>')
+         .after('<p><button id="markupHelpShowButton" type="button" class="btn btn-default">Show</button></p>');
       $("#markupHelpShowButton")
          .on("click", function (ev) {
            if ($(ev.target).hasClass('active')) {
-             $(ev.target).removeClass('active')
+             $(ev.target).removeClass('active');
              $("div.markupHelp pre").hide();
            } else {
-             $(ev.target).addClass('active')
+             $(ev.target).addClass('active');
              $("div.markupHelp pre").show();
            }
          });
       return;
+    }
+
+    if (location.pathname === '/_categories') {
+      $('ul li a').wrapInner('<span class="label">');
     }
 
     if (location.pathname.substr(0, 7) === '/_diff/') {
