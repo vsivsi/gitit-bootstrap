@@ -1,6 +1,6 @@
 $(document).ready(function(){
     if (location.pathname.substr(0, 10) != '/_history/') return;
-    $("#content").prepend("<p><small>Drag one revision onto another to see differences.</small></p>");
+
     $(".difflink").draggable({helper: "clone"});
     $(".difflink").droppable({
          accept: ".difflink",
@@ -18,4 +18,5 @@ $(document).ready(function(){
             location.href = diffurl + '?from=' + fromRev + '&to=' + toRev;
         }
     });
+    $("#content").append("<h4><small>Drag one revision onto another to see differences.</small></h4>");
 });
