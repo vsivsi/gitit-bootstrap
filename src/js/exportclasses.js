@@ -25,7 +25,7 @@ $(document).ready(function () {
 
     $("div.markupHelp pre").hide();
     $("div.markupHelp h2")
-       .after('<button id="markupHelpShowButton" type="button" class="btn btn-default">Show</button><br/>')
+       .after('<p><button id="markupHelpShowButton" type="button" class="btn btn-default">Show</button></p>')
     $("#markupHelpShowButton").on("click", function (ev) {
          if ($(ev.target).hasClass('active')) {
            $(ev.target).removeClass('active')
