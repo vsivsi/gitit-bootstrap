@@ -11,6 +11,7 @@ $(document).ready(function () {
     }
 
     if ($('#categoryList').size() === 1) {
+      $('#content').before($('#categoryList').detach());
       $('#categoryList ul').addClass('list-inline');
       $('#categoryList ul li a')
         .each(function () {
