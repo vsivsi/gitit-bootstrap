@@ -20,13 +20,13 @@
               <div id="pathNav" role="navigation">
               </div>
               <div role="navigation">
+                $userbox()$
                 <h1 class="pageTitle">
                     <a href="$base$$pageUrl$">$pagetitle$</a>
                     $if(revision)$
                         <small class="revision">Revision $revision$</small>
                     $endif$
                 </h1>
-                $userbox()$
                 $tabs$
                 $if(messages)$
                   <div class="messages">
