@@ -15,12 +15,12 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-10 col-md-push-2" id="maincol">
-          $userbox()$
           <div class="panel panel-default">
             <div class="hidden-print panel-heading">
               <div id="pathNav" role="navigation">
               </div>
               <div role="navigation">
+                $userbox()$
                 $tabs$
               </div>
             </div>
