@@ -77,11 +77,13 @@ $(document).ready(function () {
     if (location.pathname === '/_categories') {
       $('#content ul').addClass('list-inline');
       $('#content ul li a').wrapInner('<span class="label label-primary">');
+      return;
     }
 
     if (location.pathname.substr(0, 11) === '/_category/') {
       $('#content > ul').addClass('list-group');
       $("#content > ul li").addClass('list-group-item');
+      return;
     }
 
     if (location.pathname.substr(0, 7) === '/_diff/') {
@@ -92,5 +94,19 @@ $(document).ready(function () {
     if (location.pathname === '/_activity') {
       $("ul.history").addClass('list-group');
       $("ul.history li").addClass('list-group-item');
+      return;
+    }
+
+    if (location.pathname.substr(-1) === '/') { // Contents
+      $('.updir').wrapAll('<ol class="breadcrumb"></ol>');
+      $('.updir').wrap('<li></li>');
+      $('.updir').each(function (i) {
+        var q = $(this);
+        if (i === 0) {
+          q.text('Contents');
+        } else {
+          q.text(q.text().slice(0,-1));
+        }
+      });
     }
 });
