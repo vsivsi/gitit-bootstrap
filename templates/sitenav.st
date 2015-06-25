@@ -4,7 +4,7 @@
     <div class="panel-body" role="navigation">
         <ul>
           <li role="presentation"><a href="$base$/">Front page</a></li>
-          <li role="presentation"><a href="$base$/_index">All pages</a></li>
+          <li role="presentation"><a href="$base$/_index">Contents</a></li>
           <li role="presentation"><a href="$base$/_categories">Categories</a></li>
           <li role="presentation"><a href="$base$/_random">Random page</a></li>
           <li role="presentation"><a href="$base$/_activity">Recent activity</a></li>
