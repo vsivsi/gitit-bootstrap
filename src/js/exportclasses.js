@@ -3,10 +3,8 @@ $(document).ready(function () {
     if ($('.tabs').size() === 1) {
       $('.tabs').addClass('nav nav-pills');
       $('.tabs li.selected').addClass('active').attr('role', 'presentation');
-    } else {
-      $('.panel-heading').append($('.pageTitle').detach());
+      $('#content').prepend($('.pageTitle').detach());
     }
-
     if ((location.pathname.substr(0, 2) === '/_') && ($('div.pageTools').size() > 0)) {
       $('div.pageTools').hide();
     }
