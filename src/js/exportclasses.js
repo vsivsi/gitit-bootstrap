@@ -97,7 +97,7 @@ $(document).ready(function () {
       return;
     }
 
-    if (location.pathname.substr(-1) === '/') { // Contents
+    if ((location.pathname === '/_index') || (location.pathname.substr(-1) === '/')) { // Contents
       $('.updir').wrapAll('<ol class="breadcrumb"></ol>');
       $('.updir').wrap('<li></li>');
       $('.updir').each(function (i) {
@@ -108,5 +108,7 @@ $(document).ready(function () {
           q.text(q.text().slice(0,-1));
         }
       });
+      $('.index').addClass('list-group');
+      $('.index li').addClass('list-group-item');
     }
 });
