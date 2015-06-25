@@ -24,11 +24,11 @@ $(document).ready(function () {
           var q = $(this);
           if (q.text().substr(0,1) === '-') {
             q.text(q.text().substr(1));
-            q.prepend('<span class="glyphicon glyphicon-minus"/> ');
+            q.prepend('<span class="glyphicon glyphicon-minus"/>&nbps;');
             q.wrapInner('<span class="label label-danger">');
           } else if (q.text().substr(0,1) === '+') {
             q.text(q.text().substr(1));
-            q.prepend('<span class="glyphicon glyphicon-plus"/> ');
+            q.prepend('<span class="glyphicon glyphicon-plus"/>&nbps;');
             q.wrapInner('<span class="label label-success">');
           } else {
             q.wrapInner('<span class="label label-primary">');
@@ -114,7 +114,7 @@ $(document).ready(function () {
       });
       $('.index').addClass('list-group');
       $('.index li').addClass('list-group-item');
-      $('.page').prepend('<span class="glyphicon glyphicon-file"/> ');
-      $('.folder').prepend('<span class="glyphicon glyphicon-folder-open"/>  ');
+      $('.page').prepend('<span class="glyphicon glyphicon-file"/>&nbps;');
+      $('.folder').prepend('<span class="glyphicon glyphicon-folder-open"/>&nbps;&nbps;');
     }
 });
