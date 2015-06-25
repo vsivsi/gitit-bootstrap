@@ -110,5 +110,7 @@ $(document).ready(function () {
       });
       $('.index').addClass('list-group');
       $('.index li').addClass('list-group-item');
+      $('.page').prepend('<span class="glyphicon glyphicon-file"/>');
+      $('.folder').prepend('<span class="glyphicon glyphicon-folder-close"/>');
     }
 });

@@ -276,12 +276,12 @@ code > span.er { color: #ff0000; font-weight: bold; }
     background-repeat: no-repeat;
     padding-left: 20px;
 }
-.index li.page {
+/*.index li.page {
     background-image: url(../img/icons/page.png);
 }
 .index li.folder {
     background-image: url(../img/icons/folder.png);
-}
+}*/
 .index a {
     color: #000000;
     cursor: pointer;
