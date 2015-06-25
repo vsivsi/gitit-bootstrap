@@ -14,18 +14,21 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-10 col-md-push-2 panel panel-default" id="maincol">
-          <div class="hidden-print panel-heading">
-            $userbox()$
-            <div role="navigation">
-              $tabs$
+        <div class="col-md-10 col-md-push-2" id="maincol">
+          $userbox()$
+          <div class="panel panel-default">
+            <div class="hidden-print panel-heading">
+              <div id="pathNav" role="navigation">
+              </div>
+              <div role="navigation">
+                $tabs$
+              </div>
             </div>
+            $content()$
+            $if(markuphelp)$
+              $markuphelp()$
+            $endif$
           </div>
-          $content()$
-          $if(markuphelp)$
-            $markuphelp()$
-          $endif$
-        </div>
         <div class="col-md-2 col-md-pull-10 hidden-print" id="sidebar">
           <div class="row">
             $logo()$
