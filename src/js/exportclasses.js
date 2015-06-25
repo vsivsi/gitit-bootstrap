@@ -12,7 +12,7 @@ $(document).ready(function () {
       $('.pageTitle').text(pageName.slice(-1)[0]);
       $('#pathNav').prepend('<ol id="bcNav" class="breadcrumb"></ol>');
       pageName.forEach(function (val, idx) {
-        var code = '<li><a href="' + pagePath[idx] + '">' + val + '</a></li>';
+        var code = '<li' + ((idx === pagePath.length-1) ? ' class="active"' : '') +  '><a href="' + pagePath[idx] + '">' + val + '</a></li>';
         $('#bcNav').append(code);
       });
       $('#content').prepend($('.pageTitle').detach());
