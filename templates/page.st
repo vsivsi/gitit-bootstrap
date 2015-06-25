@@ -29,6 +29,7 @@
               $markuphelp()$
             $endif$
           </div>
+        </div>
         <div class="col-md-2 col-md-pull-10 hidden-print" id="sidebar">
           <div class="row">
             $logo()$
