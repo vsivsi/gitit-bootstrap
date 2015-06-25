@@ -23,8 +23,12 @@ $(document).ready(function () {
         .each(function () {
           var q = $(this);
           if (q.text().substr(0,1) === '-') {
+            q.text(q.text().substr(1));
+            q.prepend('<span class="glyphicon glyphicon-minus"/>');
             q.wrapInner('<span class="label label-danger">');
           } else if (q.text().substr(0,1) === '+') {
+            q.text(q.text().substr(1));
+            q.prepend('<span class="glyphicon glyphicon-plus"/>');
             q.wrapInner('<span class="label label-success">');
           } else {
             q.wrapInner('<span class="label label-primary">');
