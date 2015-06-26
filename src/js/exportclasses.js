@@ -9,6 +9,7 @@ $(document).ready(function () {
         var pageTitle = pageName.pop();
         var pagePath = $('.pageTitle').attr('href').split('/');
         pagePath.pop();
+        if (pagePath.length === 0) pagePath = [''];  // Home page special case
         pagePath = pagePath.map(function (val, idx) {
             return pagePath.slice(0, idx+1).join('/') + ((idx === pagePath.length-1) ? '' : '/');
         });
