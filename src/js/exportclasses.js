@@ -1,5 +1,32 @@
 $(document).ready(function () {
 
+    if ($("#exportbox").size() === 1) {
+      $("#exportbox").addClass("form-inline");
+      $("#exportbox select").addClass("form-control input-sm");
+      $("#export").addClass("form-control btn btn-default btn-sm");
+    }
+
+    if ($('#categoryList').size() === 1) {
+      $('#main').after($('#categoryList').detach());
+      $('#categoryList').addClass('panel-footer hidden-print');
+      $('#categoryList ul').addClass('list-inline');
+      $('#categoryList ul li a')
+        .each(function () {
+          var q = $(this);
+          if (q.text().substr(0,1) === '-') {
+            q.text(q.text().substr(1));
+            q.prepend('<span class="glyphicon glyphicon-minus"/>&nbsp;');
+            q.wrapInner('<span class="label label-danger">');
+          } else if (q.text().substr(0,1) === '+') {
+            q.text(q.text().substr(1));
+            q.prepend('<span class="glyphicon glyphicon-plus"/>&nbsp;');
+            q.wrapInner('<span class="label label-success">');
+          } else {
+            q.wrapInner('<span class="label label-primary">');
+          }
+        });
+    }
+
     if ($('.tabs').size() === 1) {
       $('.tabs').addClass('nav nav-pills');
       $('.tabs li.selected').addClass('active').attr('role', 'presentation');
@@ -29,33 +56,6 @@ $(document).ready(function () {
 
     $('div.pageTools').hide();
     $('#tabDiv').html($($('#topNav').detach()));
-
-    if ($("#exportbox").size() === 1) {
-      $("#exportbox").addClass("form-inline");
-      $("#exportbox select").addClass("form-control input-sm");
-      $("#export").addClass("form-control btn btn-default btn-sm");
-    }
-
-    if ($('#categoryList').size() === 1) {
-      $('#main').after($('#categoryList').detach());
-      $('#categoryList').addClass('panel-footer hidden-print');
-      $('#categoryList ul').addClass('list-inline');
-      $('#categoryList ul li a')
-        .each(function () {
-          var q = $(this);
-          if (q.text().substr(0,1) === '-') {
-            q.text(q.text().substr(1));
-            q.prepend('<span class="glyphicon glyphicon-minus"/>&nbsp;');
-            q.wrapInner('<span class="label label-danger">');
-          } else if (q.text().substr(0,1) === '+') {
-            q.text(q.text().substr(1));
-            q.prepend('<span class="glyphicon glyphicon-plus"/>&nbsp;');
-            q.wrapInner('<span class="label label-success">');
-          } else {
-            q.wrapInner('<span class="label label-primary">');
-          }
-        });
-    }
 
     if ((location.pathname === '/_login') || (location.pathname === '/_register')) {
       $("form#loginForm").addClass("form-group");
