@@ -5,7 +5,7 @@ $(document).ready(function () {
       $('.tabs li.selected').addClass('active').attr('role', 'presentation');
       if (location.pathname.substr(0, 2) !== '/_') {
         var pageName = $('.pageTitle').text().trim().split('/');
-        pageName.unshift('Contents');
+        pageName.unshift('');
         var pagePath = $('.pageTitle a').attr('href').split('/');
         pagePath = pagePath.map(function (val, idx) {
             return pagePath.slice(0, idx+1).join('/') + ((idx === pagePath.length-1) ? '' : '/');
@@ -16,9 +16,10 @@ $(document).ready(function () {
           var code = '<li' + ((idx === pagePath.length-1) ? ' class="active"' : '') +  '><a href="' + pagePath[idx] + '">' + val + '</a></li>';
           $('#bcNav').append(code);
         });
-        $('#content').prepend($('.pageTitle').detach());
+        // $('#content').prepend($('.pageTitle').detach());
       }
     }
+
     if ((location.pathname.substr(0, 2) === '/_') && ($('div.pageTools').size() > 0)) {
       $('div.pageTools').hide();
     }
