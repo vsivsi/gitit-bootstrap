@@ -19,7 +19,7 @@ $(document).ready(function () {
           $('.pageTitle').before(code);
         });
         if ($("a.rev").size() === 1) {
-          var revText = 'Revision: <code>' + $("a.rev").text().substr(0,7) '</code>';
+          var revText = 'Revision: <code>' + $("a.rev").text().substr(0,7) + '</code>';
           $("a.rev").html(revText);
         }
       }
