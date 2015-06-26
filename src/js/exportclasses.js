@@ -18,7 +18,10 @@ $(document).ready(function () {
           var code = '<li' + ((idx === pagePath.length-1) ? ' class="active"' : '') +  '><a href="' + pagePath[idx] + '">' + val + '</a></li>';
           $('.pageTitle').before(code);
         });
-        // $('#content').prepend($('.pageTitle').detach());
+        if ($("a.rev").size() === 1) {
+          var revText = Revision: '<code>' + $("a.rev").text().substr(0,7) '</code>';
+          $("a.rev").html(revText); 
+        }
       }
     }
 
@@ -113,8 +116,7 @@ $(document).ready(function () {
       var parsedText = re.exec(revText);
       var fromAbbr = "<code>" + parsedText[1].substr(0,7) + "</code>";
       var toAbbr = "<code>" + parsedText[2].substr(0,7) + "</code>";
-      $("h2.revision").html('Changes from ' + fromAbbr + ' to ' + toAbbr);
-      $("h2.revision").wrapInner('<small></small>');
+      $("h2.revision").remove();
       $("a.rev").html('Changes: ' + fromAbbr + ' <span class="glyphicon glyphicon-arrow-right"></span> ' + toAbbr);
       $("a.rev").attr('href', location.pathname);
       return;
