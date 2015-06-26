@@ -20,7 +20,7 @@
               $userbox()$
               <div id="pathNav" role="navigation">
                 <ol id="bcNav" class="breadcrumb">
-                  <li>
+                  <li id="pageAnchor">
                     <a class="pageTitle" href="$base$$pageUrl$">$pagetitle$</a>
                   </li>
                   $if(revision)$

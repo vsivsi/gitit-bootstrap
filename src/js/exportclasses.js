@@ -16,7 +16,7 @@ $(document).ready(function () {
         // $('#pathNav').prepend('<ol id="bcNav" class="breadcrumb"></ol>');
         pageName.forEach(function (val, idx) {
           var code = '<li' + ((idx === pagePath.length-1) ? ' class="active"' : '') +  '><a href="' + pagePath[idx] + '">' + val + '</a></li>';
-          $('.pageTitle').before(code);
+          $('#pageAnchor').before(code);
         });
         if ($("a.rev").size() === 1) {
           var revText = 'Revision: <code>' + $("a.rev").text().substr(0,7) + '</code>';
