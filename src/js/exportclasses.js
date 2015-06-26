@@ -24,12 +24,11 @@ $(document).ready(function () {
           $("a.rev").html(revText);
         }
       }
+      return;
     }
 
-    if ((location.pathname.substr(0, 2) === '/_') || ($('.tabs').size() === 0)) {
-      $('div.pageTools').hide();
-      $('#tabDiv').html($($('#topNav').detach()));
-    }
+    $('div.pageTools').hide();
+    $('#tabDiv').html($($('#topNav').detach()));
 
     if ($("#exportbox").size() === 1) {
       $("#exportbox").addClass("form-inline");
