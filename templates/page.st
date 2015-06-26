@@ -17,10 +17,12 @@
         <div class="col-md-10 col-md-push-2" id="maincol">
           <div class="panel panel-default">
             <div class="hidden-print panel-heading">
+              $userbox()$
               <div id="pathNav" role="navigation">
               </div>
+            </div>
+            <div class="hidden-print panel-heading">
               <div role="navigation">
-                $userbox()$
                 <h1 class="pageTitle">
                     <a href="$base$$pageUrl$">$pagetitle$</a>
                     $if(revision)$
