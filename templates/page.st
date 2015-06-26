@@ -15,33 +15,31 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-10 col-md-push-2" id="maincol">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              $userbox()$
-              <div id="pathNav" role="navigation">
-                <ol id="bcNav" class="breadcrumb">
-                  <li id="pageAnchor">
-                    <a class="pageTitle" href="$base$$pageUrl$">$pagetitle$</a>
+          <div id="topNav">
+            $userbox()$
+            <div id="pathNav" role="navigation">
+              <ol id="bcNav" class="breadcrumb">
+                <li id="pageAnchor">
+                  <a class="pageTitle" href="$base$$pageUrl$">$pagetitle$</a>
+                </li>
+                $if(revision)$
+                  <li>
+                    <a class="rev" href="$base$$pageUrl$?revision=$revision$">$revision$</a>
                   </li>
-                  $if(revision)$
-                    <li>
-                      <a class="rev" href="$base$$pageUrl$?revision=$revision$">$revision$</a>
-                    </li>
-                  $endif$
-                </ol>
-              </div>
+                $endif$
+              </ol>
             </div>
           </div>
           <div class="panel panel-default">
             <div class="hidden-print panel-heading">
-              <div role="navigation">
+              <div id="tabDiv" role="navigation">
                 $tabs$
-                $if(messages)$
-                  <div class="messages">
-                      $messages()$
-                  </div>
-                $endif$
               </div>
+              $if(messages)$
+                <div class="messages">
+                    $messages()$
+                </div>
+              $endif$
             </div>
             $content()$
             $if(markuphelp)$

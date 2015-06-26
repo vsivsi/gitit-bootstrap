@@ -25,8 +25,12 @@ $(document).ready(function () {
       }
     }
 
-    if ((location.pathname.substr(0, 2) === '/_') && ($('div.pageTools').size() > 0)) {
+    if (((location.pathname.substr(0, 2) === '/_') ||
+         ($('.tabs').size() === 0))
+        && ($('div.pageTools').size() > 0))
+    {
       $('div.pageTools').hide();
+      $('#tabDiv').html($('#topNav').detach());
     }
 
     if ($("#exportbox").size() === 1) {
