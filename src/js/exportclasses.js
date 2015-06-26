@@ -27,6 +27,42 @@ $(document).ready(function () {
         });
     }
 
+    if (location.pathname.substr(0, 7) === '/_edit/') {
+      $("form#editform").addClass("form-group form-inline");
+      $("form#editform input").addClass("form-control");
+      $("form#editform #update").addClass("btn btn-primary");
+      $("form#editform #cancel").addClass("btn btn-default");
+      $("form#editform #previewButton").addClass("btn btn-info");
+
+      $("#previewpane").hide();
+      $("#previewpane").addClass("panel panel-default panel-body");
+
+      $("div.markupHelp pre").hide();
+      $("div.markupHelp h2")
+         .after('<p><button id="markupHelpShowButton" type="button" class="btn btn-default">Show</button></p>');
+      $("#markupHelpShowButton")
+         .on("click", function (ev) {
+           if ($(ev.target).hasClass('active')) {
+             $(ev.target).removeClass('active');
+             $("div.markupHelp pre").hide();
+           } else {
+             $(ev.target).addClass('active');
+             $("div.markupHelp pre").show();
+           }
+         });
+    }
+
+    if (location.pathname.substr(0, 7) === '/_diff/') {
+      var revText = $("h2.revision").text();
+      var re = /Changes from ([0-9a-f]+) to ([0-9a-f]+)/;
+      var parsedText = re.exec(revText);
+      var fromAbbr = "<code>" + parsedText[1].substr(0,7) + "</code>";
+      var toAbbr = "<code>" + parsedText[2].substr(0,7) + "</code>";
+      $("h2.revision").remove();
+      $("a.rev").html('Changes: ' + fromAbbr + ' <span class="glyphicon glyphicon-arrow-right"></span> ' + toAbbr);
+      $("a.rev").attr('href', location.pathname);
+    }
+
     if ($('#tabDiv > ul').size() === 1) {
       $('#tabDiv > ul').addClass('nav nav-pills');
       $('#tabDiv > ul li.selected').addClass('active').attr('role', 'presentation');
@@ -74,32 +110,6 @@ $(document).ready(function () {
       return;
     }
 
-    if (location.pathname.substr(0, 7) === '/_edit/') {
-      $("form#editform").addClass("form-group form-inline");
-      $("form#editform input").addClass("form-control");
-      $("form#editform #update").addClass("btn btn-primary");
-      $("form#editform #cancel").addClass("btn btn-default");
-      $("form#editform #previewButton").addClass("btn btn-info");
-
-      $("#previewpane").hide();
-      $("#previewpane").addClass("panel panel-default panel-body");
-
-      $("div.markupHelp pre").hide();
-      $("div.markupHelp h2")
-         .after('<p><button id="markupHelpShowButton" type="button" class="btn btn-default">Show</button></p>');
-      $("#markupHelpShowButton")
-         .on("click", function (ev) {
-           if ($(ev.target).hasClass('active')) {
-             $(ev.target).removeClass('active');
-             $("div.markupHelp pre").hide();
-           } else {
-             $(ev.target).addClass('active');
-             $("div.markupHelp pre").show();
-           }
-         });
-      return;
-    }
-
     if (location.pathname === '/_categories') {
       $('#content ul').addClass('list-inline');
       $('#content ul li a').wrapInner('<span class="label label-primary">');
@@ -109,18 +119,6 @@ $(document).ready(function () {
     if (location.pathname.substr(0, 11) === '/_category/') {
       $('#content > ul').addClass('list-group');
       $("#content > ul li").addClass('list-group-item');
-      return;
-    }
-
-    if (location.pathname.substr(0, 7) === '/_diff/') {
-      var revText = $("h2.revision").text();
-      var re = /Changes from ([0-9a-f]+) to ([0-9a-f]+)/;
-      var parsedText = re.exec(revText);
-      var fromAbbr = "<code>" + parsedText[1].substr(0,7) + "</code>";
-      var toAbbr = "<code>" + parsedText[2].substr(0,7) + "</code>";
-      $("h2.revision").remove();
-      $("a.rev").html('Changes: ' + fromAbbr + ' <span class="glyphicon glyphicon-arrow-right"></span> ' + toAbbr);
-      $("a.rev").attr('href', location.pathname);
       return;
     }
 
