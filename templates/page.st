@@ -17,17 +17,22 @@
         <div class="col-md-10 col-md-push-2" id="maincol">
           <div class="panel panel-default">
             $userbox()$
-            <div id="pathNav" role="navigation"></div>
+            <div id="pathNav" role="navigation">
+              <ol id="bcNav" class="breadcrumb">
+                <li>
+                  <a class="pageTitle" href="$base$$pageUrl$">$pagetitle$</a>
+                </li>
+                $if(revision)$
+                  <li>
+                    <a class="revision" href="$base$$pageUrl$?revision=$revision$">$revision$</a>
+                  </li>
+                $endif$
+              </ol>
+            </div>
           </div>
           <div class="panel panel-default">
             <div class="hidden-print panel-heading">
               <div role="navigation">
-                <h1 class="pageTitle">
-                    <a href="$base$$pageUrl$">$pagetitle$</a>
-                    $if(revision)$
-                        <small class="revision">Revision $revision$</small>
-                    $endif$
-                </h1>
                 $tabs$
                 $if(messages)$
                   <div class="messages">
