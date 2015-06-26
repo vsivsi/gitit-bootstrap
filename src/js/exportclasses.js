@@ -25,10 +25,7 @@ $(document).ready(function () {
       }
     }
 
-    if (((location.pathname.substr(0, 2) === '/_') ||
-         ($('.tabs').size() === 0))
-        && ($('div.pageTools').size() > 0))
-    {
+    if ((location.pathname.substr(0, 2) === '/_') || ($('.tabs').size() === 0)) {
       $('div.pageTools').hide();
       $('#tabDiv').html($($('#topNav').detach()));
     }
@@ -133,7 +130,7 @@ $(document).ready(function () {
     }
 
     if ((location.pathname === '/_index') || (location.pathname.substr(-1) === '/')) { // Contents
-      $('.updir').wrapAll('<ol class="breadcrumb"></ol>');
+      $('.updir').wrapAll('<ol id="contentsNav" class="breadcrumb"></ol>');
       $('.updir').wrap('<li></li>');
       $('.updir').each(function (i) {
         var q = $(this);
@@ -143,6 +140,7 @@ $(document).ready(function () {
           q.text(q.text().slice(0,-1));
         }
       });
+      $('#bcNav').replaceWith($($('#contentsNav').detach()));
       $('.index').addClass('list-group');
       $('.index li').addClass('list-group-item');
       $('.page').prepend('<span class="glyphicon glyphicon-file"/>&nbsp;');
