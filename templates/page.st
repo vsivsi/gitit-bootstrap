@@ -24,7 +24,7 @@
                 </li>
                 $if(revision)$
                   <li>
-                    <a class="revision" href="$base$$pageUrl$?revision=$revision$">$revision$</a>
+                    <a class="rev" href="$base$$pageUrl$?revision=$revision$">$revision$</a>
                   </li>
                 $endif$
               </ol>
