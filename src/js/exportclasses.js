@@ -32,18 +32,19 @@ $(document).ready(function () {
       $('#tabDiv > ul li.selected').addClass('active').attr('role', 'presentation');
       if (location.pathname.substr(0, 2) !== '/_') {
         var pageName = $('.pageTitle').text().trim().split('/');
-        pageName.unshift('');
+        pageName.unshift('Contents');
         var pageTitle = pageName.pop();
         var pagePath = $('.pageTitle').attr('href').split('/');
         pagePath.pop();
         if (pagePath.length === 0) pagePath = [''];  // Home page special case
         pagePath = pagePath.map(function (val, idx) {
-            return pagePath.slice(0, idx+1).join('/') + ((idx === pagePath.length-1) ? '' : '/');
+            return pagePath.slice(0, idx+1).join('/') + '/');
         });
+        pagePath[0] = '/_index'
         $('.pageTitle').text(pageTitle);
         // $('#pathNav').prepend('<ol id="bcNav" class="breadcrumb"></ol>');
         pageName.forEach(function (val, idx) {
-          var code = '<li' + ((idx === pagePath.length-1) ? ' class="active"' : '') +  '><a href="' + pagePath[idx] + '/">' + val + '</a></li>';
+          var code = '<li' + ((idx === pagePath.length-1) ? ' class="active"' : '') +  '><a href="' + pagePath[idx] + '">' + val + '</a></li>';
           $('#pageAnchor').before(code);
         });
         if ($("a.rev").size() === 1) {
