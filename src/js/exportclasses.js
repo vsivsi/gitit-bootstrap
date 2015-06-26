@@ -111,11 +111,11 @@ $(document).ready(function () {
       var revText = $("h2.revision").text();
       var re = /Changes from ([0-9a-f]+) to ([0-9a-f]+)/;
       var parsedText = re.exec(revText);
-      var fromAbbr = parsedText[1].substr(0,7);
-      var toAbbr = parsedText[2].substr(0,7);
-      $("h2.revision").text("Changes from " + fromAbbr + " to " + toAbbr);
+      var fromAbbr = "<code>" + parsedText[1].substr(0,7) + "</code>";
+      var toAbbr = "<code>" + parsedText[2].substr(0,7) + "</code>";
+      $("h2.revision").html("Changes from " + fromAbbr + " to " + toAbbr);
       $("h2.revision").wrapInner('<small></small>');
-      $("a.rev").text("Diff: " + fromAbbr + " - " + toAbbr);
+      $("a.rev").html("Changes: " + fromAbbr + " <span class="glyphicon glyphicon-arrow-right"></span> " + toAbbr);
       $("a.rev").attr('href', location.pathname);
       return;
     }
