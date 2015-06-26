@@ -17,7 +17,7 @@
         <div class="col-md-10 col-md-push-2" id="maincol">
           <div class="panel panel-default">
             $userbox()$
-            <div id="pathNav" role="navigation"/>
+            <div id="pathNav" role="navigation"></div>
           </div>
           <div class="panel panel-default">
             <div class="hidden-print panel-heading">
