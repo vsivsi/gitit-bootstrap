@@ -20,8 +20,6 @@
               $userbox()$
               <div id="pathNav" role="navigation">
               </div>
-            </div>
-            <div class="hidden-print panel-heading">
               <div role="navigation">
                 <h1 class="pageTitle">
                     <a href="$base$$pageUrl$">$pagetitle$</a>

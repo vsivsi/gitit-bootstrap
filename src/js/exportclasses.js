@@ -3,19 +3,21 @@ $(document).ready(function () {
     if ($('.tabs').size() === 1) {
       $('.tabs').addClass('nav nav-pills');
       $('.tabs li.selected').addClass('active').attr('role', 'presentation');
-      var pageName = $('.pageTitle').text().trim().split('/');
-      pageName.unshift('Contents');
-      var pagePath = $('.pageTitle a').attr('href').split('/');
-      pagePath = pagePath.map(function (val, idx) {
-          return pagePath.slice(0, idx+1).join('/') + ((idx === pagePath.length-1) ? '' : '/');
-      });
-      $('.pageTitle').text(pageName.slice(-1)[0]);
-      $('#pathNav').prepend('<ol id="bcNav" class="breadcrumb"></ol>');
-      pageName.forEach(function (val, idx) {
-        var code = '<li' + ((idx === pagePath.length-1) ? ' class="active"' : '') +  '><a href="' + pagePath[idx] + '">' + val + '</a></li>';
-        $('#bcNav').append(code);
-      });
-      $('#content').prepend($('.pageTitle').detach());
+      if (location.pathname.substr(0, 2) !== '/_') {
+        var pageName = $('.pageTitle').text().trim().split('/');
+        pageName.unshift('Contents');
+        var pagePath = $('.pageTitle a').attr('href').split('/');
+        pagePath = pagePath.map(function (val, idx) {
+            return pagePath.slice(0, idx+1).join('/') + ((idx === pagePath.length-1) ? '' : '/');
+        });
+        $('.pageTitle').text(pageName.slice(-1)[0]);
+        $('#pathNav').prepend('<ol id="bcNav" class="breadcrumb"></ol>');
+        pageName.forEach(function (val, idx) {
+          var code = '<li' + ((idx === pagePath.length-1) ? ' class="active"' : '') +  '><a href="' + pagePath[idx] + '">' + val + '</a></li>';
+          $('#bcNav').append(code);
+        });
+        $('#content').prepend($('.pageTitle').detach());
+      }
     }
     if ((location.pathname.substr(0, 2) === '/_') && ($('div.pageTools').size() > 0)) {
       $('div.pageTools').hide();
