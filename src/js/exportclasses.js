@@ -38,7 +38,7 @@ $(document).ready(function () {
         pagePath.pop();
         if (pagePath.length === 0) pagePath = [''];  // Home page special case
         pagePath = pagePath.map(function (val, idx) {
-            return pagePath.slice(0, idx+1).join('/') + '/');
+            return pagePath.slice(0, idx+1).join('/') + '/';
         });
         pagePath[0] = '/_index'
         $('.pageTitle').text(pageTitle);
