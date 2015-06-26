@@ -30,7 +30,7 @@ $(document).ready(function () {
         && ($('div.pageTools').size() > 0))
     {
       $('div.pageTools').hide();
-      $('#tabDiv').html($('#topNav').detach());
+      $('#tabDiv').html($($('#topNav').detach()));
     }
 
     if ($("#exportbox").size() === 1) {
@@ -145,7 +145,6 @@ $(document).ready(function () {
       });
       $('.index').addClass('list-group');
       $('.index li').addClass('list-group-item');
-      $('.index li:last').addClass('active');
       $('.page').prepend('<span class="glyphicon glyphicon-file"/>&nbsp;');
       $('.folder').prepend('<span class="glyphicon glyphicon-folder-open"/>&nbsp;&nbsp;');
     }
