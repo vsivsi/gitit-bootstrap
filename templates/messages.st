@@ -1,3 +1,3 @@
-<ul class="messages">
+<div class="messages">
   $messages:listitem()$
-</ul>
+</div>

@@ -1,1 +1,1 @@
-<li><p class="alert alert-danger">$it$</p></li>
+<div class="alert alert-danger" role="alert">$it$</div>
