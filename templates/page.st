@@ -36,9 +36,8 @@
                 $tabs$
               </div>
               $if(messages)$
-                <div class="messages">
-                    $messages()$
-                </div>
+                <p></p>
+                $messages()$
               $endif$
             </div>
             $content()$
