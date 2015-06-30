@@ -12,7 +12,6 @@
     $endif$
   </head>
   <body>
-    $something()$ 
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-10 col-md-push-2" id="maincol">
