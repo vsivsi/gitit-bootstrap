@@ -95,10 +95,11 @@ $(document).ready(function () {
     $('#tabDiv').html($($('#topNav').detach()));
 
     if ((location.pathname === '/_login') || (location.pathname === '/_register')) {
-      $("form#loginForm").addClass("form-group");
+      $('label').each(function (i,e) {
+         $(e).next(':input').addBack().wrapAll('<div class="form-group"></div>'); });
       $("form#loginForm fieldset input:not(.req)").addClass("form-control");
       $("form#loginForm fieldset input[type='submit']").addClass("btn btn-primary");
-      $("form#loginForm fieldset #login").before("<br/>");
+      $("form#loginForm fieldset #login").before("<p/>");
       return;
     }
 
@@ -125,6 +126,11 @@ $(document).ready(function () {
     if (location.pathname === '/_activity') {
       $("ul.history").addClass('list-group');
       $("ul.history li").addClass('list-group-item');
+      return;
+    }
+
+    if (location.pathname === '/_upload') {
+
       return;
     }
 
