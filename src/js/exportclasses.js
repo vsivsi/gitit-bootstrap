@@ -95,6 +95,7 @@ $(document).ready(function () {
     $('#tabDiv').html($($('#topNav').detach()));
 
     if ((location.pathname === '/_login') || (location.pathname === '/_register')) {
+      $('form br').remove()
       $('label').each(function (i,e) {
          $(e).next(':input').addBack().wrapAll('<div class="form-group"></div>'); });
       $("form#loginForm fieldset input:not(.req)").addClass("form-control");
