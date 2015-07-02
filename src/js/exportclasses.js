@@ -99,7 +99,7 @@ $(document).ready(function () {
          $(e).next(':input').addBack().wrapAll('<div class="form-group"></div>'); });
       $("form#loginForm fieldset input:not(.req)").addClass("form-control");
       $("form#loginForm fieldset input[type='submit']").addClass("btn btn-primary");
-      $("form#loginForm fieldset #login").before("<p/>");
+      $("form#loginForm").after("<p/>");
       return;
     }
 
