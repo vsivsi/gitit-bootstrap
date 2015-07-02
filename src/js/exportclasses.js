@@ -98,8 +98,8 @@ $(document).ready(function () {
       $('form#loginForm br').remove();
       $('form#loginForm label').each(function (i,e) {
          $(e).next(':input').addBack().wrapAll('<div class="form-group"></div>'); });
-      $("form#loginForm fieldset input:not(.req)").addClass("form-control");
-      $("form#loginForm fieldset input[type='submit']").addClass("btn btn-primary");
+      $("form#loginForm input:not(.req)").addClass("form-control");
+      $("form#loginForm input[type='submit']").addClass("btn btn-primary");
       $("form#loginForm").after("<p/>");
       return;
     }
@@ -108,9 +108,8 @@ $(document).ready(function () {
       $('form#resetPassword br').remove();
       $('form#resetPassword label').each(function (i,e) {
          $(e).next(':input').addBack().wrapAll('<div class="form-group"></div>'); });
-      $("form#resetPassword fieldset input").addClass("form-control");
-      $("form#resetPassword fieldset input[type='submit']").addClass("btn btn-primary");
-      $("form#resetPassword fieldset #resetPassword").before("<br/>");
+      $("form#resetPassword input").addClass("form-control");
+      $("form#resetPassword input[type='submit']").addClass("btn btn-primary");
       return;
     }
 
@@ -133,7 +132,12 @@ $(document).ready(function () {
     }
 
     if (location.pathname === '/_upload') {
-
+      $('div#content form').attr('id','uploadFile');
+      $('form#uploadFile br').remove();
+      $('form#uploadFile p > *').unwrap();
+      $('form#uploadFile label').each(function (i,e) {
+         $(e).next(':input').addBack().wrapAll('<div class="form-group"></div>'); });
+      $("form#uploadFile input").addClass("form-control");
       return;
     }
 
