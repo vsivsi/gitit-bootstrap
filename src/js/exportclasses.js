@@ -76,7 +76,7 @@ $(document).ready(function () {
         pagePath = pagePath.map(function (val, idx) {
             return pagePath.slice(0, idx+1).join('/') + '/';
         });
-        pagePath[0] = '/_index'
+        pagePath[0] = '/_index';
         $('.pageTitle').text(pageTitle);
         // $('#pathNav').prepend('<ol id="bcNav" class="breadcrumb"></ol>');
         pageName.forEach(function (val, idx) {
@@ -95,8 +95,8 @@ $(document).ready(function () {
     $('#tabDiv').html($($('#topNav').detach()));
 
     if ((location.pathname === '/_login') || (location.pathname === '/_register')) {
-      $('form br').remove()
-      $('label').each(function (i,e) {
+      $('form#loginForm br').remove();
+      $('form#loginForm label').each(function (i,e) {
          $(e).next(':input').addBack().wrapAll('<div class="form-group"></div>'); });
       $("form#loginForm fieldset input:not(.req)").addClass("form-control");
       $("form#loginForm fieldset input[type='submit']").addClass("btn btn-primary");
@@ -105,7 +105,9 @@ $(document).ready(function () {
     }
 
     if (location.pathname === '/_resetPassword') {
-      $("form#resetPassword").addClass("form-group");
+      $('form#resetPassword br').remove();
+      $('form#resetPassword label').each(function (i,e) {
+         $(e).next(':input').addBack().wrapAll('<div class="form-group"></div>'); });
       $("form#resetPassword fieldset input").addClass("form-control");
       $("form#resetPassword fieldset input[type='submit']").addClass("btn btn-primary");
       $("form#resetPassword fieldset #resetPassword").before("<br/>");
